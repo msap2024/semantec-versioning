@@ -26,8 +26,7 @@ jobs:
    
     - name: Install GitVersion
       uses: ./gitversion/setup
-      with:
-         versionSpec: '5.5.0'
+      
     - name: Determine Version
       uses: ./gitversion/execute
     - run: |
