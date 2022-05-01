@@ -33,7 +33,7 @@ jobs:
 
    # Calculate the version for the build and display the value of the GITVERSION_NUMBER environment varaible
   
-    - name: Determine Version
+    - name: versioning
       uses: ./gitversion/execute
       with:
         useConfigFile: true
