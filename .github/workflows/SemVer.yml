@@ -34,9 +34,9 @@ jobs:
    # Calculate the version for the build and display the value of the GITVERSION_NUMBER environment varaible
   
     - name: Semantic Versioning
-      uses: ./gitversion/execute
+      id: versioning
+      uses: PaulHatch/semantic-version@v4.0.2
       with:
-        useConfigFile: true
         branch: main
         tag_prefix: "v"
         major_pattern: "BREAKING CHANGE:"
