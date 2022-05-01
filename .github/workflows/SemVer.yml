@@ -34,7 +34,9 @@ jobs:
    # Calculate the version for the build and display the value of the GITVERSION_NUMBER environment varaible
   
     - name: Determine Version
-      uses: ./gitversion/execute
+      uses: ./gitversion/execute@v9.9
+      with:
+        useConfigFile: true
         
     - name: Display SemVer
       run: |
