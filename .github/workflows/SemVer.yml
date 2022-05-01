@@ -33,10 +33,15 @@ jobs:
 
    # Calculate the version for the build and display the value of the GITVERSION_NUMBER environment varaible
   
-    - name: versioning
+    - name: Semantic Versioning
       uses: ./gitversion/execute
       with:
         useConfigFile: true
+        branch: main
+        tag_prefix: "v"
+        major_pattern: "BREAKING CHANGE:"
+        minor_pattern: "feat:"
+        format: "v${major}.${minor}.${patch}-prerelease${increment}"
         
     - name: Display SemVer
       run: |
