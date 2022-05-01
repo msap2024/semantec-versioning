@@ -26,11 +26,13 @@ jobs:
    
     - name: Install GitVersion
       uses: ./gitversion/setup
+      with:
+        versionSpec: '5.5.0'
       
     - name: Determine Version
       uses: ./gitversion/execute
-    - run: |
-          echo "FullSemVer: ${{ steps.gitversion.outputs.fullSemVer }}"
+      with:
+        useConfigFile: true
 
   #  # Calculate the version for the build and display the value of the GITVERSION_NUMBER environment varaible
   
