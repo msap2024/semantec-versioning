@@ -30,9 +30,7 @@ jobs:
          versionSpec: '5.5.0'
     - name: Determine Version
       uses: ./gitversion/execute
-      with:
-        useConfigFile: true
-   
+      
    # Calculate the version for the build and display the value of the GITVERSION_NUMBER environment varaible
   
     - name: Determine Version
