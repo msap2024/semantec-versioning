@@ -4,10 +4,9 @@ name: Continuous Integration
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  
-# Allows workflow to run manually
+   
+permissions: write-all
 
-  workflow_dispatch:
   
   
 # A workflow run is made up of one or more jobs run sequentailly or in parallel 
