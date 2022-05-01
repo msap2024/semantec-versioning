@@ -1,11 +1,11 @@
-name: Release
+name: ci
 "on":
   push:
-    branches:
-      - main
-      - next
-      - beta
-      - "*.x"
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
+  
 jobs:
   release:
     name: release
