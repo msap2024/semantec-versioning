@@ -35,6 +35,8 @@ jobs:
   
     - name: Determine Version
       uses: ./gitversion/execute
+      with:
+        useConfigFile: true
         
     - name: Display SemVer
       run: |
