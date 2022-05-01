@@ -22,12 +22,12 @@ jobs:
       with: 
         fetch-depth: 0
         
-   # Git version install
+#    # Git version install
    
-    - name: Install GitVersion
-      uses: ./gitversion/setup
-      with:
-        versionSpec: '5.5.0'
+#     - name: Install GitVersion
+#       uses: ./gitversion/setup
+#       with:
+#         versionSpec: '5.5.0'
       
 
 
@@ -43,9 +43,9 @@ jobs:
         minor_pattern: "feat:"
         format: "v${major}.${minor}.${patch}-prerelease${increment}"
         
-    - name: Display SemVer
-      run: |
-       echo "SemVer: $GITVERSION_SEMVER"
+#     - name: Display SemVer
+#       run: |
+#        echo "SemVer: $GITVERSION_SEMVER"
       
     - name: Create Release
       if: ${{ !startsWith(github.ref, 'refs/tags/') }}
