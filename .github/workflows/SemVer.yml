@@ -1,0 +1,49 @@
+name: Continuous Integration
+"on":
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  
+# Allows workflow to run manually
+
+  workflow_dispatch:
+  
+  
+# A workflow run is made up of one or more jobs run sequentailly or in parallel 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+# steps represnt a sequence of tasks executed as part of the job
+    steps:
+    #checkout your repository under $GITHUB_WORKSPACE, so your job can access it
+    - name : Checkout
+      uses: actions/checkout@v2
+      with: 
+        fetch-depth: 0
+        
+   # Git version install
+   
+    - name: Install GitVersion
+      uses: ./Gitversion/setup
+      with:
+         versionSpec: '5.5.0'
+    - name: Determine Version
+      uses: ./gitversion/execute
+      with:
+        useConfigFile: true
+   
+   # Calculate the version for the build and display the value of the GITVERSION_NUMBER environment varaible
+  
+    - name: Determine Version
+      uses: ./gitversion/execute
+        
+    - name: Display SemVer
+      run: |
+       echo "SemVer: $GITVERSION_SEMVER"
+      
+      
+      
+      
+     
+
