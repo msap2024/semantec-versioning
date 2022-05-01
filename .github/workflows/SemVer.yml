@@ -29,19 +29,16 @@ jobs:
       with:
         versionSpec: '5.5.0'
       
+
+
+   # Calculate the version for the build and display the value of the GITVERSION_NUMBER environment varaible
+  
     - name: Determine Version
       uses: ./gitversion/execute
-      with:
-        useConfigFile: true
-
-  #  # Calculate the version for the build and display the value of the GITVERSION_NUMBER environment varaible
-  
-  #   - name: Determine Version
-  #     uses: ./gitversion/execute
         
-  #   - name: Display SemVer
-  #     run: |
-  #      echo "SemVer: $GITVERSION_SEMVER"
+    - name: Display SemVer
+      run: |
+       echo "SemVer: $GITVERSION_SEMVER"
       
       
       
