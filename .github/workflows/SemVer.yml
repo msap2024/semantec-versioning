@@ -31,10 +31,11 @@ jobs:
         minor_pattern: "feat:"
         format: "v${major}.${minor}.${patch}-prerelease${increment}"
         
+      
+    - uses: actions/checkout@master
     - name: Bump version and push tag
-      uses: actions/checkout@master
       uses: hennejg/github-tag-action@v4.1.jh1
-        with:
+      with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       
     - name: Create Release
