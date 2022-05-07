@@ -32,11 +32,11 @@ jobs:
         format: "v${major}.${minor}.${patch}-prerelease${increment}"
         
       
-    - uses: actions/checkout@v3
-    - uses: rickstaa/action-create-tag@v1
-      with:
-        tag: "v0.2.0"
-        message: "Latest release"
+#     - uses: actions/checkout@v3
+#     - uses: rickstaa/action-create-tag@v1
+#       with:
+#         tag: "v0.2.0"
+#         message: "Latest release"
       
 #     - name: Create Release
 #       uses: actions/create-release@v1
