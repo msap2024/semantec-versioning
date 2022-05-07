@@ -21,15 +21,15 @@ jobs:
         
    # Calculate the version for the build and display the value of the GITVERSION_NUMBER environment varaible
   
-#     - name: Semantic Versioning
-#       id: versioning
-#       uses: PaulHatch/semantic-version@v4.0.2
-#       with:
-#         branch: main
-#         tag_prefix: "v"
-#         major_pattern: "BREAKING CHANGE:"
-#         minor_pattern: "feat:"
-#         format: "v${major}.${minor}.${patch}-prerelease${increment}"
+    - name: Semantic Versioning
+      id: versioning
+      uses: PaulHatch/semantic-version@v4.0.2
+      with:
+        branch: main
+        tag_prefix: "v"
+        major_pattern: "BREAKING CHANGE:"
+        minor_pattern: "feat:"
+        format: "v${major}.${minor}.${patch}-prerelease${increment}"
         
       
     - uses: actions/checkout@v3
