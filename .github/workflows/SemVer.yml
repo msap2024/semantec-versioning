@@ -32,7 +32,7 @@ jobs:
         format: "v${major}.${minor}.${patch}-prerelease${increment}"
         
       
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
     - name: Bump version and push tag
       uses: hennejg/github-tag-action@v4.1.jh1
       with:
