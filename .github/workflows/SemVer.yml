@@ -4,8 +4,6 @@ name: Continuous Integration
     branches: [ main ]
   pull_request:
     branches: [ main ]
-    tags:
-     - '*'
    
 permissions: write-all
 
@@ -44,8 +42,8 @@ jobs:
       uses: actions/create-release@v1
       id: create_release
       with:
-          draft: true
-          tag_name: ${{ github.ref }}
+          draft: false
+#           tag_name: ${{ github.ref }}
           release_name: ${{ steps.versioning.outputs.version }}
           prerelease: false
           
