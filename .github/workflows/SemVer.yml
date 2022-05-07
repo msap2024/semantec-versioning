@@ -20,7 +20,9 @@ jobs:
         fetch-depth: 0
     - uses: rymndhng/release-on-push-action@master
       with:
-        bump_version_scheme: minor
+       bump_version_scheme: minor
+    env:
+     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
   
         
