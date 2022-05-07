@@ -47,6 +47,7 @@ jobs:
           draft: false
           tag_name: ${{ github.ref }}
           release_name: ${{ steps.versioning.outputs.version }}
-          prerelease: true   
+          prerelease: false
+          body_path: CHANGELOG.md
       env:
        GITHUB_TOKEN: ${{ github.token }}
