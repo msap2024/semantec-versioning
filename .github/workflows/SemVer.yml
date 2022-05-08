@@ -1,9 +1,13 @@
 name: Continuous Integration
 "on":
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - 'release/**'
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
+      - 'release/**'
    
 permissions: write-all
 
