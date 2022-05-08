@@ -3,12 +3,12 @@ name: Continuous Integration
   push:
     branches:
       - main
-      - 'release/**'
+      
   pull_request:
     branches:
       - main
-      - 'release/**'
-   
+    
+       
 permissions: write-all
 
 # A workflow run is made up of one or more jobs run sequentailly or in parallel 
