@@ -4,13 +4,13 @@ name: Continuous Integration
     branches:
       - main
       - 'feat/**''
-      - 'release/**'
+
+      
   pull_request:
     branches:
       - main
       - 'feat/**'
-      - 'release/**'
-   
+       
 permissions: write-all
 
 # A workflow run is made up of one or more jobs run sequentailly or in parallel 
