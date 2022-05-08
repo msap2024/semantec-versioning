@@ -18,7 +18,8 @@ jobs:
       uses: actions/checkout@v2
       with: 
         fetch-depth: 0
-    - uses: rymndhng/release-on-push-action@master
+    - id: release
+      uses: rymndhng/release-on-push-action@master
       with:
        bump_version_scheme: minor
        release_body: "This is the first release"
@@ -26,8 +27,15 @@ jobs:
        use_github_release_notes: true
        release_name: "Release <RELEASE_VERSION>"
        max_commits: 100
+       
+    - name: Check Output Parameters
+      run: |
+       echo "Got tag name ${{ steps.release.outputs.tag_name }}"
+       echo "Got release version ${{ steps.release.outputs.version }}"
     env:
      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+   
+
   
   
         
