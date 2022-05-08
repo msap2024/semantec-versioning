@@ -21,7 +21,7 @@ jobs:
     - uses: rymndhng/release-on-push-action@master
       with:
        bump_version_scheme: minor
-       release_body: "When set, adds extra to body!"
+       release_body: "This is the first release"
     env:
      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
