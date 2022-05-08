@@ -26,7 +26,7 @@ jobs:
       uses: rymndhng/release-on-push-action@master
       with:
        bump_version_scheme: patch
-       release_body: "This is the minor release"
+       release_body: "This is the patch release"
        tag_prefix: "v"
        use_github_release_notes: true
        release_name: "Release <RELEASE_VERSION>"
