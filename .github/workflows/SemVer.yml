@@ -3,10 +3,12 @@ name: Continuous Integration
   push:
     branches:
       - main
+      - 'feat/**''
       - 'release/**'
   pull_request:
     branches:
       - main
+      - 'feat/**'
       - 'release/**'
    
 permissions: write-all
